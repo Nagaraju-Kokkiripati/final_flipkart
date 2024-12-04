@@ -1,11 +1,3 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, render_template_string
-import os
-from paddleocr import PaddleOCR
-import re
-from datetime import datetime
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import img_to_array, load_img
-import numpy as np
 # Initialize the OCR model for English
 ocr = PaddleOCR(lang='en')
 #yolo_model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
