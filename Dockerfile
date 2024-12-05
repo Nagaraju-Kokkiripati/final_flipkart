@@ -1,5 +1,5 @@
-# Use the official Python image
-FROM python:3.12.2-slim
+# Use an official lightweight Python image
+FROM python:3.9-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -13,6 +13,9 @@ RUN apt-get update && apt-get install -y \
     gcc \
     libgl1-mesa-glx \
     libglib2.0-0 \
+    libjpeg-dev \
+    zlib1g-dev \
+    libpng-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy application files
